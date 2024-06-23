@@ -3,9 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/roder/OneDrive/Documentos/quotegen/src/com/quotegen/controllers/FXMLLoginController.java</file>
-            <file>file:/C:/Users/roder/OneDrive/Documentos/quotegen/src/com/quotegen/views/FXMLLogin.fxml</file>
-            <file>file:/C:/Users/roder/OneDrive/Documentos/quotegen/src/com/quotegen/assets/styleInputTextLogin.css</file>
+            <file>file:/C:/Users/roder/OneDrive/Documentos/quotegen/src/com/quotegen/views/FXMLManageUser.fxml</file>
+            <file>file:/C:/Users/roder/OneDrive/Documentos/quotegen/src/com/quotegen/controllers/FXMLManageUserController.java</file>
         </group>
     </open-files>
 </project-private>
