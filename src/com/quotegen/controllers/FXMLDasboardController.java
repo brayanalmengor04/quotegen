@@ -50,7 +50,7 @@ public class FXMLDasboardController implements Initializable {
         buttonNavUser.setOnMouseClicked(this::actionNavUser); 
         buttonNavProduct.setOnMouseClicked(this::actionNavProduct);
         buttonNavQuote.setOnMouseClicked(this::actionNavQuote); 
-      //  buttonNavDasboard.setOnMouseClicked(this::actionNavDasboard); 
+        buttonNavDasboard.setOnMouseClicked(this::actionNavDasboard); 
         buttonNavExit.setOnMouseClicked(this::actionNavExit);
     }
     
@@ -84,11 +84,11 @@ public class FXMLDasboardController implements Initializable {
        }
         
     }
-   /**   
+  
     private void actionNavDasboard(MouseEvent event) { 
        try {
          AnchorPane pane = FXMLLoader.load(getClass()
-                 .getResource("/com/quotegen/views/FXMLDasboard.fxml"));
+                 .getResource("/com/quotegen/views/FXMLWelcomeDasboard.fxml"));
            setContent(pane);     
        } catch (IOException ex) { 
            System.out.println(ex.getMessage());
@@ -96,7 +96,7 @@ public class FXMLDasboardController implements Initializable {
         
     } 
 
-    **/
+   
     
      private void setContent(AnchorPane pane) {
         viewChangeDashboard.getChildren().clear();

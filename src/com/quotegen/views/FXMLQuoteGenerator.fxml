@@ -1,10 +1,453 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600" prefWidth="735.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quotegen.controllers.FXMLQuoteGeneratorController">
+<AnchorPane prefHeight="600" prefWidth="752.0" styleClass="tabSectionPane" stylesheets="@../assets/tabPanestyle.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quotegen.controllers.FXMLQuoteGeneratorController">
    <children>
-      <Label layoutX="354.0" layoutY="292.0" text="Quote Generator" />
+      <TabPane layoutX="27.0" layoutY="115.0" prefHeight="480.0" prefWidth="704.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab styleClass="tabSectionPane" text="Company Information">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox layoutX="8.0" layoutY="16.0" prefHeight="398.0" prefWidth="666.0" style="-fx-background-color: #FFFF;">
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="398.0" prefWidth="165.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="63.0" prefWidth="165.0" text="Logotipe Company" />
+                                    <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="92.0" prefWidth="98.0" style="-fx-border-radius: 200; -fx-background-radius: 200; -fx-background-color: #F7F4F9;" text="Button">
+                                       <graphic>
+                                          <ImageView fitHeight="66.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../resources/subirLogo.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                              <Line endX="-100.0" endY="400.0" fill="#8c8c8d" startX="-100.0" stroke="#404041" />
+                              <VBox alignment="TOP_CENTER" prefHeight="398.0" prefWidth="298.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="63.0" prefWidth="300.0" text="Information Company">
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox alignment="CENTER" prefHeight="31.0" prefWidth="269.0">
+                                       <children>
+                                          <ImageView fitHeight="32.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../resources/company.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets bottom="15.0" right="5.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <TextField prefHeight="26.0" prefWidth="223.0" promptText="Please Enter name company!" styleClass="textLogin" stylesheets="@../assets/styleInputTextLogin.css">
+                                             <HBox.margin>
+                                                <Insets bottom="20.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="31.0" prefWidth="269.0">
+                                       <children>
+                                          <ImageView fitHeight="36.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../resources/ubicacion.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <TextField prefHeight="26.0" prefWidth="223.0" promptText="Please Enter address company!" styleClass="textLogin" stylesheets="@../assets/styleInputTextLogin.css">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="31.0" prefWidth="269.0">
+                                       <children>
+                                          <ImageView fitHeight="36.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../resources/ring-phone.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <TextField prefHeight="26.0" prefWidth="223.0" promptText="Please Enter phone company!" styleClass="textLogin" stylesheets="@../assets/styleInputTextLogin.css" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="31.0" prefWidth="269.0">
+                                       <children>
+                                          <ImageView fitHeight="36.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../resources/email.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <TextField prefHeight="26.0" prefWidth="223.0" promptText="Please Enter email company!" styleClass="textLogin" stylesheets="@../assets/styleInputTextLogin.css">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="20.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <Line endX="-100.0" endY="400.0" fill="#8c8c8d" startX="-100.0" stroke="#404041" />
+                              <VBox alignment="TOP_CENTER" prefHeight="398.0" prefWidth="203.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="56.0" prefWidth="225.0" text="Confirm Information">
+                                       <VBox.margin>
+                                          <Insets bottom="310.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Button alignment="CENTER_RIGHT" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="202.0" style="-fx-background-color: transparent;" text="Button">
+                                       <graphic>
+                                          <ImageView fitHeight="41.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../resources/nextpane.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab styleClass="tabSectionPane" text="Custommer Information">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox prefHeight="398.0" prefWidth="666.0" style="-fx-background-color: #FFFF;">
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="398.0" prefWidth="165.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="63.0" prefWidth="165.0" text="Information Custommer" />
+                                    <ImageView fitHeight="150.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/imglogin3.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </VBox>
+                              <Line endX="-100.0" endY="400.0" fill="#8c8c8d" startX="-100.0" stroke="#404041" />
+                              <VBox alignment="TOP_CENTER" prefHeight="398.0" prefWidth="298.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="63.0" prefWidth="300.0" text="Information Custommer">
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox alignment="CENTER" prefHeight="31.0" prefWidth="269.0">
+                                       <children>
+                                          <ImageView fitHeight="32.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../resources/company.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets bottom="15.0" right="5.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <TextField prefHeight="26.0" prefWidth="223.0" promptText="Please Enter name Custommer o client!" styleClass="textLogin" stylesheets="@../assets/styleInputTextLogin.css">
+                                             <HBox.margin>
+                                                <Insets bottom="20.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="31.0" prefWidth="269.0">
+                                       <children>
+                                          <ImageView fitHeight="36.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../resources/ubicacion.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <TextField prefHeight="26.0" prefWidth="223.0" promptText="Please Enter address !" styleClass="textLogin" stylesheets="@../assets/styleInputTextLogin.css">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="31.0" prefWidth="269.0">
+                                       <children>
+                                          <ImageView fitHeight="36.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../resources/ring-phone.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <TextField prefHeight="26.0" prefWidth="223.0" promptText="Please Enter phone !" styleClass="textLogin" stylesheets="@../assets/styleInputTextLogin.css" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="31.0" prefWidth="269.0">
+                                       <children>
+                                          <ImageView fitHeight="36.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../resources/email.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <TextField prefHeight="26.0" prefWidth="223.0" promptText="Please Enter email !" styleClass="textLogin" stylesheets="@../assets/styleInputTextLogin.css">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="20.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <Line endX="-100.0" endY="400.0" fill="#8c8c8d" startX="-100.0" stroke="#404041" />
+                              <VBox alignment="TOP_CENTER" prefHeight="398.0" prefWidth="203.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="56.0" prefWidth="225.0" text="Confirm Information">
+                                       <VBox.margin>
+                                          <Insets bottom="310.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Button alignment="CENTER_RIGHT" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="202.0" style="-fx-background-color: transparent;" text="Button">
+                                       <graphic>
+                                          <ImageView fitHeight="41.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../resources/nextpane.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab styleClass="tabSectionPane" text="Product Detail">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox prefHeight="398.0" prefWidth="666.0" style="-fx-background-color: #FFFF;">
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="398.0" prefWidth="165.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="63.0" prefWidth="165.0" text="Product Detail" />
+                                    <ImageView fitHeight="116.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/imglogin2.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </VBox>
+                              <Line endX="-100.0" endY="400.0" fill="#8c8c8d" startX="-100.0" stroke="#404041" />
+                              <VBox alignment="TOP_CENTER" prefHeight="398.0" prefWidth="298.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="48.0" prefWidth="297.0" text="Detail Producst">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TableView prefHeight="209.0" prefWidth="304.0" />
+                                    <HBox alignment="CENTER" prefHeight="31.0" prefWidth="269.0">
+                                       <children>
+                                          <ImageView fitHeight="32.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../resources/descripcion.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets bottom="15.0" left="5.0" right="5.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <TextField prefHeight="26.0" prefWidth="223.0" promptText="Please Enter description product!" styleClass="textLogin" stylesheets="@../assets/styleInputTextLogin.css">
+                                             <HBox.margin>
+                                                <Insets bottom="20.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="36.0" style="-fx-background-color: #321042; -fx-text-fill: #fff;" text="...">
+                                             <HBox.margin>
+                                                <Insets bottom="15.0" left="10.0" right="10.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="47.0" prefWidth="239.0">
+                                       <children>
+                                          <ImageView fitHeight="32.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../resources/monedas.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets bottom="15.0" left="5.0" right="5.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <TextField prefHeight="26.0" prefWidth="126.0" promptText="Please enter unit!" styleClass="textLogin" stylesheets="@../assets/styleInputTextLogin.css">
+                                             <HBox.margin>
+                                                <Insets bottom="20.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="47.0" prefWidth="239.0">
+                                       <children>
+                                          <ImageView fitHeight="32.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../resources/etiqueta.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets bottom="15.0" left="5.0" right="5.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <TextField prefHeight="26.0" prefWidth="111.0" promptText="Please enter price!" styleClass="textLogin" stylesheets="@../assets/styleInputTextLogin.css">
+                                             <HBox.margin>
+                                                <Insets bottom="20.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="27.0" prefWidth="42.0" style="-fx-background-color: transparent;" text="Button">
+                                             <HBox.margin>
+                                                <Insets bottom="15.0" left="20.0" />
+                                             </HBox.margin>
+                                             <graphic>
+                                                <ImageView fitHeight="30.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../resources/boton-agregar.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="43.0" prefWidth="35.0" style="-fx-background-color: transparent;" text="Button">
+                                             <HBox.margin>
+                                                <Insets bottom="15.0" />
+                                             </HBox.margin>
+                                             <graphic>
+                                                <ImageView fitHeight="29.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../resources/eliminar.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <Line endX="-100.0" endY="400.0" fill="#8c8c8d" startX="-100.0" stroke="#404041" />
+                              <VBox alignment="TOP_CENTER" prefHeight="398.0" prefWidth="203.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="56.0" prefWidth="225.0" text="Confirm Information">
+                                       <VBox.margin>
+                                          <Insets bottom="310.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Button alignment="CENTER_RIGHT" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="202.0" style="-fx-background-color: transparent;" text="Button">
+                                       <graphic>
+                                          <ImageView fitHeight="41.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../resources/nextpane.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab styleClass="tabSectionPane" text="Print Quote Generator">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox prefHeight="398.0" prefWidth="666.0" style="-fx-background-color: #FFFF;">
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="398.0" prefWidth="165.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="63.0" prefWidth="165.0" text="Register Product" />
+                                    <ImageView fitHeight="150.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/imglogin3.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </VBox>
+                              <Line endX="-100.0" endY="400.0" fill="#8c8c8d" startX="-100.0" stroke="#404041" />
+                              <VBox alignment="TOP_CENTER" prefHeight="401.0" prefWidth="496.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="63.0" prefWidth="300.0" text="Print Quote Generator">
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="227.0" prefWidth="386.0" style="-fx-background-color: transparent;" text="Button">
+                                       <graphic>
+                                          <ImageView fitHeight="230.0" fitWidth="379.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../resources/printquoete.png" />
+                                             </image>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
    </children>
 </AnchorPane>

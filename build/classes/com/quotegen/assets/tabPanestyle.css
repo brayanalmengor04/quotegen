@@ -1,0 +1,18 @@
+.tabSectionPane{
+     -fx-border-color: #321042;
+    -fx-border-width: 1;
+    -fx-border-style: solid;
+    -fx-background-color: #F7F4F9;
+    -fx-border-radius: 3; 
+    -fx-padding: 5; 
+    -fx-text-base-color: #321042;
+    
+}
+.tabSectionPane :selected{
+    -fx-background-color: #321042;
+    -fx-text-base-color:white;
+    -fx-font-weight: bold;
+}
+.backgroundSectionTab{
+    -fx-background-color:#F7F4F9 ;
+} 

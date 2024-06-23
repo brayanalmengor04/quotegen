@@ -9,10 +9,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" fx:id="anchorDasboardMain" prefHeight="600.0" prefWidth="900.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/22" fx:controller="com.quotegen.controllers.FXMLDasboardController">
+<AnchorPane id="AnchorPane" fx:id="anchorDasboardMain" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quotegen.controllers.FXMLDasboardController">
    <children>
-      <VBox alignment="TOP_CENTER" layoutX="-1.0" prefHeight="600.0" prefWidth="167.0" style="-fx-background-color: #321042;">
+      <VBox alignment="TOP_CENTER" layoutX="-19.0" prefHeight="605.0" prefWidth="200.0" style="-fx-background-color: #321042;">
          <children>
             <Label alignment="CENTER" prefHeight="53.0" prefWidth="167.0" text="QuoteGen Inventory" textFill="#fcfcfc" wrapText="true">
                <font>
@@ -154,6 +153,20 @@
             </Label>
          </children>
       </VBox>
-      <AnchorPane fx:id="viewChangeDashboard" layoutX="166.0" prefHeight="600.0" prefWidth="735.0" />
+      <AnchorPane fx:id="viewChangeDashboard" layoutX="181.0" prefHeight="605.0" prefWidth="731.0" style="-fx-background-color: #694D88;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="1.0" prefHeight="583.0" prefWidth="731.0" text="¡Bienvenido al Dashboard de QuoteGen Inventory" textAlignment="RIGHT" textFill="WHITE" wrapText="true">
+               <graphic>
+                  <ImageView fitHeight="488.0" fitWidth="659.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/welcomepng.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Jelly Crazies" size="28.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
    </children>
 </AnchorPane>

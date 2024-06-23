@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="605.0" prefWidth="750.0" style="-fx-background-color: #694D88;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quotegen.controllers.FXMLWelcomeDasboardController">
+   <children>
+      <ImageView fitHeight="612.0" fitWidth="762.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/welcomepng.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

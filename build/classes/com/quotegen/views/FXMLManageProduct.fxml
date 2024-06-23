@@ -1,11 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="735.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/22" fx:controller="com.quotegen.controllers.FXMLManageProductController">
+<AnchorPane id="AnchorPane" prefHeight="605.0" prefWidth="752.0" style="-fx-background-color: #FEFCFF;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quotegen.controllers.FXMLManageProductController">
    <children>
-      <Label layoutX="354.0" layoutY="292.0" text="Manage Product" />
+      <VBox layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="735.0">
+         <children>
+            <HBox prefHeight="74.0" prefWidth="735.0">
+               <children>
+                  <AnchorPane prefHeight="74.0" prefWidth="534.0">
+                     <children>
+                        <TextField layoutX="33.0" layoutY="17.0" prefHeight="37.0" prefWidth="488.0" promptText="Search prduct ">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="40.0" />
+                           </padding>
+                        </TextField>
+                        <ImageView fitHeight="23.0" fitWidth="24.0" layoutX="40.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/lupa.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <ImageView fitHeight="40.0" fitWidth="46.0" pickOnBounds="true">
+                     <HBox.margin>
+                        <Insets left="40.0" top="14.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@../resources/imagen_login.jpg" />
+                     </image>
+                  </ImageView>
+                  <VBox alignment="CENTER" prefHeight="74.0" prefWidth="120.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="99.0" text="Name User" textFill="#a11bbc">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="17.0" prefWidth="90.0" text="Rol">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="95.0" prefWidth="735.0">
+               <children>
+                  <Label prefHeight="40.0" prefWidth="403.0" text="Complete product registration">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="60.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label text="see all" />
+                  <ImageView fitHeight="24.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/arrowleft.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="29.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/arrowright.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="395.0" prefWidth="655.0" style="-fx-background-color: transparent;" vbarPolicy="NEVER">
+               <content>
+                  <FlowPane hgap="20.0" maxHeight="395.0" maxWidth="-Infinity" orientation="VERTICAL" prefHeight="395.0" prefWidth="735.0" vgap="20.0" />
+               </content>
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" />
+               </VBox.margin>
+            </ScrollPane>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>

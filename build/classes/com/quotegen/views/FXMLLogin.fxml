@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
@@ -15,7 +16,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #522469; -fx-background-radius: 0;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quotegen.controllers.FXMLLoginController">
    <children>
-      <HBox alignment="CENTER" layoutX="25.0" layoutY="26.0" prefHeight="553.0" prefWidth="854.0" style="-fx-background-color: #fff;">
+      <HBox alignment="CENTER" layoutX="25.0" layoutY="26.0" prefHeight="553.0" prefWidth="854.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
          <children>
             <ImageView fx:id="imageLogin" fitHeight="551.0" fitWidth="404.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -35,53 +36,75 @@
                   <ImageView fx:id="imageHome" fitHeight="198.0" fitWidth="286.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../resources/imglogin3.png" />
-                     </image></ImageView>
+                     </image>
+                  </ImageView>
                   <Label prefHeight="17.0" prefWidth="356.0" text="Username" textFill="#666262" />
-                  <HBox prefHeight="36.0" prefWidth="461.0">
+                  <AnchorPane prefHeight="34.0" prefWidth="401.0">
                      <children>
-                        <TextField fx:id="textUser" prefHeight="26.0" prefWidth="327.0" promptText="Please enter your user name" styleClass="textLogin" stylesheets="@../assets/styleInputTextLogin.css" />
-                        <ImageView fx:id="validateIniciarUsername" fitHeight="26.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                        <TextField fx:id="textUser" layoutX="51.0" layoutY="3.0" prefHeight="26.0" prefWidth="327.0" promptText="Please enter your user name" styleClass="textLogin" stylesheets="@../assets/styleInputTextLogin.css">
+                           <padding>
+                              <Insets left="30.0" />
+                           </padding>
+                        </TextField>
+                        <ImageView fx:id="validateIniciarUsername" fitHeight="26.0" fitWidth="25.0" layoutX="353.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../resources/nodisponible.png" />
                            </image>
                         </ImageView>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="51.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/usuario.png" />
+                           </image>
+                        </ImageView>
                      </children>
-                     <VBox.margin>
-                        <Insets left="50.0" right="50.0" />
-                     </VBox.margin>
-                  </HBox>
+                  </AnchorPane>
                   <Label prefHeight="17.0" prefWidth="356.0" text="Email" textFill="#666262" />
-                  <HBox prefHeight="30.0" prefWidth="294.0">
+                  <AnchorPane prefHeight="29.0" prefWidth="461.0">
                      <children>
-                        <TextField fx:id="textEmail" prefHeight="26.0" prefWidth="326.0" promptText="Please enter your Email" styleClass="textLogin" stylesheets="@../assets/styleInputTextLogin.css" />
-                        <ImageView fx:id="validateIniciarEmail" fitHeight="25.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                        <TextField fx:id="textEmail" layoutX="51.0" layoutY="8.0" prefHeight="26.0" prefWidth="326.0" promptText="Please enter your Email" styleClass="textLogin" stylesheets="@../assets/styleInputTextLogin.css">
+                           <padding>
+                              <Insets left="30.0" />
+                           </padding>
+                        </TextField>
+                        <ImageView fx:id="validateIniciarEmail" fitHeight="25.0" fitWidth="31.0" layoutX="352.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../resources/nodisponible.png" />
                            </image>
                         </ImageView>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="51.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/correologin.png" />
+                           </image>
+                        </ImageView>
                      </children>
-                     <VBox.margin>
-                        <Insets left="50.0" right="50.0" />
-                     </VBox.margin>
-                  </HBox>
+                  </AnchorPane>
                   <Label prefHeight="17.0" prefWidth="356.0" text="Password" textFill="#666262" />
-                  <HBox prefHeight="37.0" prefWidth="311.0">
+                  <AnchorPane prefHeight="49.0" prefWidth="461.0">
                      <children>
-                        <PasswordField fx:id="textPassword" prefHeight="26.0" prefWidth="326.0" promptText="Please enter your password" styleClass="textLogin" stylesheets="@../assets/styleInputTextLogin.css" />
-                        <ImageView fx:id="validateIniciarPassword" fitHeight="27.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                        <PasswordField fx:id="textPassword" layoutX="51.0" layoutY="13.0" prefHeight="26.0" prefWidth="326.0" promptText="Please enter your password" styleClass="textLogin" stylesheets="@../assets/styleInputTextLogin.css">
+                           <padding>
+                              <Insets left="30.0" />
+                           </padding>
+                        </PasswordField>
+                        <ImageView fx:id="validateIniciarPassword" fitHeight="27.0" fitWidth="26.0" layoutX="351.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../resources/nodisponible.png" />
                            </image>
                         </ImageView>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="51.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/cerrar-con-llave.png" />
+                           </image>
+                        </ImageView>
                      </children>
-                     <VBox.margin>
-                        <Insets left="50.0" right="50.0" />
-                     </VBox.margin>
-                  </HBox>
+                  </AnchorPane>
                   <Button fx:id="buttonIniciar" mnemonicParsing="false" onAction="#actionSignUp" prefHeight="25.0" prefWidth="255.0" styleClass="buttonLogin" stylesheets="@../assets/styleInputTextLogin.css" text="Sign Up">
                      <VBox.margin>
                         <Insets bottom="20.0" />
                      </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                   <Label fx:id="textRegister" text="Don’t have an account ? Create an account here" textFill="#8d69d0" />
                </children>
