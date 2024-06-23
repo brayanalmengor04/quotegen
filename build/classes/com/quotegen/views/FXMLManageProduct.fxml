@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="735.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/22" fx:controller="com.quotegen.controllers.FXMLManageProductController">
+   <children>
+      <Label layoutX="354.0" layoutY="292.0" text="Manage Product" />
+   </children>
+</AnchorPane>

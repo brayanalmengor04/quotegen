@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" fx:id="anchorDasboardMain" prefHeight="600.0" prefWidth="900.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/22" fx:controller="com.quotegen.controllers.FXMLDasboardController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="-1.0" prefHeight="600.0" prefWidth="167.0" style="-fx-background-color: #321042;">
+         <children>
+            <Label alignment="CENTER" prefHeight="53.0" prefWidth="167.0" text="QuoteGen Inventory" textFill="#fcfcfc" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="buttonNavDasboard" prefHeight="41.0" prefWidth="133.0" text="Dasboard" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="47.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/dasboard.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Agency FB" size="16.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label prefHeight="25.0" prefWidth="127.0" text="Managment" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="buttonNavUser" prefHeight="41.0" prefWidth="133.0" text="Manage user" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="47.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/usermanageer.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Agency FB" size="16.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="buttonNavProduct" prefHeight="41.0" prefWidth="133.0" text="Manage product" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="47.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/productmanager.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Agency FB" size="16.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label graphicTextGap="0.0" prefHeight="17.0" prefWidth="118.0">
+               <graphic>
+                  <ImageView fitHeight="1.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/line.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="134.0" text="Tools" textFill="#fffefe">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="buttonNavQuote" prefHeight="41.0" prefWidth="133.0" text="Quote Generator" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="47.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/quotemanager.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Agency FB" size="16.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label graphicTextGap="0.0" prefHeight="17.0" prefWidth="118.0">
+               <graphic>
+                  <ImageView fitHeight="1.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/line.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="buttonNavExit" prefHeight="41.0" prefWidth="133.0" text="Sign out" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="47.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/out.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Agency FB" size="16.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets top="180.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="viewChangeDashboard" layoutX="166.0" prefHeight="600.0" prefWidth="735.0" />
+   </children>
+</AnchorPane>

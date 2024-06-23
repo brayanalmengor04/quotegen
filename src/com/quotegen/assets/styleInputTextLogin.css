@@ -1,0 +1,14 @@
+.textLogin{
+   
+    -fx-background-color: transparent; 
+    -fx-border-color: #984E83; /* Color del borde inferior (en este caso azul) */
+    -fx-border-width: 0 0 1 0; /* Ancho del borde: arriba, derecha, abajo, izquierda */
+    -fx-border-style: solid;
+}  
+
+.buttonLogin{
+    -fx-background-color:#984E83 ; 
+    -fx-background-radius: 5; 
+    -fx-text-fill: #ffffff; 
+    -fx-text-alignment: center;
+}
