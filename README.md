@@ -66,8 +66,9 @@ Tu trabajar en el paquete llamado `com.quotegen.implement` quiero que primero me
 `com.quotegen.domain` llamada **User** . con sus atributos requerido . ahi agrege `src/main/java/com/quotegen/domain/User.java`. Lo que haras es definir el metodo o la funcion solo definirlo hay un ejemplo en :`src/main/java/com/quotegen/implement/IUser.java` y luego implentar los metodo de la interface guiate de como lo cree. hay un ejemplo en la clase `src/main/java/com/quotegen/implement/UserInmplement.java` .  
 
 ##Descripcion de lo que haras  
--Quiero un metodo donde primero haga un tipo de recorrido del **Archivo.JSON** y lo guardes en un arraylist .  
--Quiero un metodo donde tenga ese arraylist y por medio del recorrido del **ArrayList** hagas **(INSERT ,UPDATE, DELETE, SELECT) **(Ya sabras la logica que aplicaras la idea es que se guarden los datos tanto sobreescribiendo o guardando de alguna manera para asi poder recorrer el archivo para generar los cards.  
+
+- Quiero un metodo donde primero haga un tipo de recorrido del **Archivo.JSON** y lo guardes en un arraylist .  
+- Quiero un metodo donde tenga ese arraylist y por medio del recorrido del **ArrayList** hagas **(INSERT ,UPDATE, DELETE, SELECT) **(Ya sabras la logica que aplicaras la idea es que se guarden los datos tanto sobreescribiendo o guardando de alguna manera para asi poder recorrer el archivo para generar los cards.  
 - Tambien haras lo mismo con otro Archivo json llamado **Product** que hara la misma funcion que usuario ** (SELECT, UPDATE, DELETE,INSERT)**
 - Por ultimo un metodo donde pueda Obtener ese arrayList del JSON actualizado  (USER, PRODUCT).
 
