@@ -2,7 +2,7 @@
 
 Este proyecto JavaFX es un sistema para generar cotizaciones y gestionar inventarios de producto y usuarios proyecto de Ingienieria II de la Universidad Tecnologica de Panama.
 
-
+![Proyecto](./appquote.png)
 
  
 ## Estructura del Proyecto
