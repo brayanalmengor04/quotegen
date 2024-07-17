@@ -1,0 +1,40 @@
+[{
+        "description": "Camiseta de algodón",
+        "unit": 3,
+        "price": 15.99,
+        "total": 47.97
+    }, {
+        "description": "Zapatos deportivos",
+        "unit": 1,
+        "price": 59.99,
+        "total": 59.99
+    }, {
+        "description": "Pantalones vaqueros",
+        "unit": 2,
+        "price": 29.95,
+        "total": 59.90
+    }, {
+        "description": "Gafas de sol",
+        "unit": 1,
+        "price": 25.50,
+        "total": 25.50
+    } 
+    , {
+        "description": "Prueba producto", 
+        "unit": 1,
+        "price": 25.50,
+        "total": 25.50 
+    } 
+     , {
+        "description": "Prueba producto 2", 
+        "unit": 1,
+        "price": 25.50,
+        "total": 25.50 
+    }
+     , {
+        "description": "Prueba producto 3", 
+        "unit": 1,
+        "price": 25.50,
+        "total": 25.50 
+    }
+]

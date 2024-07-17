@@ -1,8 +1,15 @@
 
 package com.quotegen.implement;
 
+import com.quotegen.domain.Usuario;
+import java.util.ArrayList;
+import java.util.List;
+
 
 public interface IUser {
-    // Retorno // NombreMetodo // Valor Recibir
-    String pruebaMetodo (String prueba);
+    
+    Usuario logIn (Usuario usuario);
+    ArrayList<Usuario> readUser (String urlJson); 
+    void insertUser(Usuario usuario);
+    
 }

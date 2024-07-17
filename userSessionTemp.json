@@ -1,0 +1,79 @@
+[
+    {
+        "password": "Aabj_cx04",
+        "nombrerol": "Admin",
+        "permision": true,
+        "nombre": "BryanADM1",
+        "email": "brayanalmengor@gmail.com"
+    },
+    {
+        "password": "elcjpty12",
+        "nombrerol": "Admin",
+        "permision": true,
+        "nombre": "EdwinADM2",
+        "email": "edwinAdmin@gmail.com"
+    },
+    {
+        "password": "lole_1234",
+        "nombrerol": "Admin",
+        "permision": true,
+        "nombre": "RoderADM3",
+        "email": "roderickAdmin@gmail.com"
+    },
+    {
+        "password": "pass1234",
+        "nombrerol": "Consumer",
+        "permision": true,
+        "nombre": "AliceCON1",
+        "email": "aliceCON1@gmail.com"
+    },
+    {
+        "password": "pass5678",
+        "nombrerol": "Consumer",
+        "permision": true,
+        "nombre": "BobCON2",
+        "email": "bobCON2@gmail.com"
+    },
+    {
+        "password": "passabcd",
+        "nombrerol": "Consumer",
+        "permision": true,
+        "nombre": "CharlieCON3",
+        "email": "charlieCON3@gmail.com"
+    },
+    {
+        "password": "passwxyz",
+        "nombrerol": "Consumer",
+        "permision": true,
+        "nombre": "DavidCON4",
+        "email": "davidCON4@gmail.com"
+    },
+    {
+        "password": "pass9876",
+        "nombrerol": "Consumer",
+        "permision": true,
+        "nombre": "EveCON5",
+        "email": "eveCON5@gmail.com"
+    },
+    {
+        "password": "pass6543",
+        "nombrerol": "Consumer",
+        "permision": true,
+        "nombre": "FrankCON6",
+        "email": "frankCON6@gmail.com"
+    },
+    {
+        "password": "pass32102",
+        "nombrerol": "Consumer",
+        "permision": false,
+        "nombre": "GraceCON7",
+        "email": "graceCON7@gmail.com"
+    },
+    {
+        "password": "123456788",
+        "nombrerol": "Admin",
+        "permision": true,
+        "nombre": "AdminTest",
+        "email": "admintesting@gmail.com"
+    }
+]
