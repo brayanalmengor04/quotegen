@@ -46,12 +46,12 @@
                   </ImageView>
                   <VBox alignment="CENTER" prefHeight="74.0" prefWidth="120.0">
                      <children>
-                        <Label prefHeight="17.0" prefWidth="99.0" text="NameUsuario" textFill="#a11bbc">
+                        <Label fx:id="NameManageUser" prefHeight="17.0" prefWidth="99.0" text="NameUsuario" textFill="#a11bbc">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label prefHeight="17.0" prefWidth="90.0" text="Rol">
+                        <Label fx:id="RolManageUser" prefHeight="17.0" prefWidth="90.0" text="Rol">
                            <VBox.margin>
                               <Insets bottom="10.0" />
                            </VBox.margin>
@@ -84,17 +84,18 @@
                         <Image url="@../resources/arrowright.png" />
                      </image>
                   </ImageView>
+                  <Button fx:id="buttonChangeCambios" mnemonicParsing="false" text="cargar" />
                </children>
             </HBox>
             <ScrollPane hbarPolicy="NEVER" prefHeight="395.0" prefWidth="655.0" style="-fx-background-color: transparent;" vbarPolicy="NEVER">
                <content>
-                  <FlowPane fx:id="flowPaneContainer" hgap="20.0" maxHeight="395.0" maxWidth="-Infinity" orientation="VERTICAL" prefHeight="395.0" prefWidth="735.0" vgap="20.0" />
+                  <FlowPane fx:id="flowPaneContainer" hgap="20.0" maxHeight="395.0" maxWidth="-Infinity" orientation="VERTICAL" prefHeight="395.0" prefWidth="735.0" style="-fx-background-color: #fff;" vgap="20.0" />
                </content>
                <VBox.margin>
                   <Insets left="50.0" right="50.0" />
                </VBox.margin>
             </ScrollPane>
-            <Button fx:id="buttonPrueba" mnemonicParsing="false" text="Prueba" />
+            <Button fx:id="createUser" mnemonicParsing="false" text="Create User" />
          </children>
       </VBox>
    </children>

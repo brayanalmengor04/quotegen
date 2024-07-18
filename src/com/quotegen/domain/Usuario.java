@@ -11,6 +11,16 @@ public class Usuario extends Rol{
         this.password = password;
     }
     // Si le agregamos permision true va ser admin - si no user normal  
+
+    public Usuario() {
+    }
+
+    public Usuario(String username, String email, String password) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
+    }
+
     
     public String getUsername() {
         return username;
@@ -34,6 +44,19 @@ public class Usuario extends Rol{
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Usuario{");
+        sb.append("username=").append(username);
+        sb.append(", email=").append(email);
+        sb.append(", password=").append(password);  
+        sb.append(", namerol=").append(getNameRol());
+        sb.append(", permision=").append(getPermission());
+        sb.append('}');
+        return sb.toString();
     }
 
     

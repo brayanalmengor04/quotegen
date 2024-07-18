@@ -1,11 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXML2.java to edit this template
- */
-package com.quotegen.controllers;
 
+package com.quotegen.controllers;
+import com.quotegen.domain.UserSession;
+import com.quotegen.domain.Usuario;
+import com.quotegen.implement.UserImplements;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -29,8 +29,14 @@ import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-public class FXMLLoginController implements Initializable {
-        
+public class FXMLLoginController implements Initializable { 
+    
+    private static final String URLJSON = "/com/quotegen/assets/userSession.json";    
+    ArrayList <Usuario> usuarios = new ArrayList<>(); 
+    
+    Usuario usuarioLogIn = null;
+    Usuario usuarioFill = new Usuario(); 
+    
     @FXML 
     private Button buttonIniciar;
     
@@ -51,33 +57,55 @@ public class FXMLLoginController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) { 
-            
+      
+        
+       
+
+        
          validateLoginSignUp();
     }    
+
+    
     
     @FXML 
     private void actionSignUp (ActionEvent event){
-        try {  
+        
             
             // Condicion de inicio de sesion 
+            UserImplements userFun = new UserImplements(); 
             
+            // pasar este usuario  
+            usuarioLogIn = new Usuario();
+            usuarioLogIn = userFun.logIn(usuarioFill); 
             
-            
+            if (usuarioLogIn!=null) {   
+                
+                 // un sola instancia en toda la clase      
+                 UserSession.getInstance().setUsuarioLogIn(usuarioLogIn);
+        
+                
+                 try { 
+             
+                Parent root = FXMLLoader.load(getClass().getResource("/com/quotegen/views/FXMLDasboard.fxml"));
+                Scene scene = new Scene(root);
+                Stage stage = new Stage();
+                stage.initStyle(StageStyle.UNDECORATED);
+                stage.setScene(scene);
+                stage.show();
+                Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                currentStage.close(); 
+                
+                } catch (IOException ex) { 
+                  System.out.println(ex.getMessage());
+             }
+            }
+            else{
+                System.out.println("Usuario no valido!");
+            }
             
             ////////////////////////////////////
-            
-           Parent root = FXMLLoader.load(getClass().getResource("/com/quotegen/views/FXMLDasboard.fxml"));
-            Scene scene = new Scene(root);
-           Stage stage = new Stage(); 
-           stage.initStyle(StageStyle.UNDECORATED); 
-           stage.setScene(scene); 
-           stage.show();     
-         Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-         currentStage.close(); 
-         
-        } catch (IOException ex) { 
-            System.out.println(ex.getMessage());
-        }
+          
+        
        
     }
     
@@ -88,10 +116,6 @@ public class FXMLLoginController implements Initializable {
     
       private void validateEmail(String email) { 
           
-          
-          
-          
-          
         if (!email.isEmpty() && email.length() >= 11 && email.endsWith("@gmail.com")) {
             
               String beforeAt = email.substring(0, email.indexOf("@"));
@@ -101,11 +125,14 @@ public class FXMLLoginController implements Initializable {
                       validateIniciarEmail.setImage(newImage);
                    System.out.println("El correo electrónico es válido.");
                    // Aquí va el código que deseas ejecutar si la condición es verdadera
+                   usuarioFill.setEmail(textEmail.getText());
+                   
+                   
+                   
                } else { 
                      Image newImage = new Image(getClass().getResourceAsStream("/com/quotegen/resources/nodisponible.png"));
                       validateIniciarEmail.setImage(newImage);
                    System.out.println("El correo electrónico no cumple con los criterios (menos de 7 caracteres antes de '@gmail.com').");
-                   // Aquí va el código que deseas ejecutar si no cumple la condición de longitud antes de @gmail.com
                }
            
          
@@ -129,12 +156,12 @@ public class FXMLLoginController implements Initializable {
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
                 if (newValue.length() >= 9) {
                   
-                    textPassword.setText(oldValue); 
                     
                      Image newImage = new Image(getClass().getResourceAsStream("/com/quotegen/resources/disponible.png"));
                      validateIniciarPassword.setImage(newImage);  
-                     textUser.setText(newValue.substring(0, 9));
-                     // Obtener valor
+                     textPassword.setText(newValue.substring(0, 9));
+                     // Obtener valor 
+                     usuarioFill.setPassword(textPassword.getText());
                     
                 }
                 else{
@@ -152,7 +179,8 @@ public class FXMLLoginController implements Initializable {
                     
                      Image newImage = new Image(getClass().getResourceAsStream("/com/quotegen/resources/disponible.png"));
                      validateIniciarUsername.setImage(newImage);  
-                     // Obtener valor
+                     // Obtener valor 
+                     usuarioFill.setUsername(textUser.getText());
                     
                 }
                 else{
@@ -179,7 +207,11 @@ public class FXMLLoginController implements Initializable {
         });
           
       }
-      
+
+   
+   
+
+  
       
       
 }

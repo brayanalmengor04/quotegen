@@ -1,53 +1,49 @@
-
 package com.quotegen.domain;
 
-
 public class Customer {
-   private String nameCompany,address,phone,email;  
 
-    public Customer(String nameCompany, String address, String phone, String email) {
-        this.nameCompany = nameCompany;
-        this.address = address;
-        this.phone = phone;
-        this.email = email;
-    }
+    private String namecustommer, addresscustommer, phonecustommer, emailcustommer;
 
     public Customer() {
     }
-   
-   
-    public String getNameCompany() {
-        return nameCompany;
+
+    public Customer(String namecustommer, String addresscustommer, String phonecustommer, String emailcustommer) {
+        this.namecustommer = namecustommer;
+        this.addresscustommer = addresscustommer;
+        this.phonecustommer = phonecustommer;
+        this.emailcustommer = emailcustommer;
     }
 
-    public void setNameCompany(String nameCompany) {
-        this.nameCompany = nameCompany;
+    public String getNamecustommer() {
+        return namecustommer;
     }
 
-    public String getAddress() {
-        return address;
+    public void setNamecustommer(String namecustommer) {
+        this.namecustommer = namecustommer;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public String getAddresscustommer() {
+        return addresscustommer;
     }
 
-    public String getPhone() {
-        return phone;
+    public void setAddresscustommer(String addresscustommer) {
+        this.addresscustommer = addresscustommer;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public String getPhonecustommer() {
+        return phonecustommer;
     }
 
-    public String getEmail() {
-        return email;
+    public void setPhonecustommer(String phonecustommer) {
+        this.phonecustommer = phonecustommer;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public String getEmailcustommer() {
+        return emailcustommer;
     }
-   
-   
-   
+
+    public void setEmailcustommer(String emailcustommer) {
+        this.emailcustommer = emailcustommer;
+    }
+
 }

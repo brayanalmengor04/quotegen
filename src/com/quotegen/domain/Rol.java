@@ -9,6 +9,9 @@ public class Rol {
     private String nameRol;  
     private Boolean permission;  
 
+    public Rol() {
+    }
+
     public Rol(String nameRol, Boolean permission) {
         this.nameRol = nameRol;
         this.permission = permission;

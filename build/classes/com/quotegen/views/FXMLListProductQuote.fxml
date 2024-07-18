@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quotegen.controllers.FXMLListProductQuoteController">
+   <children>
+      <TableView fx:id="tableProduct" prefHeight="400.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="descripcionCol" prefWidth="225.0" text="Descripcion" />
+          <TableColumn fx:id="unitcol" minWidth="0.0" prefWidth="75.0" text="Unidad" />
+            <TableColumn fx:id="preciocol" minWidth="0.0" prefWidth="122.0" text="Precio" />
+            <TableColumn fx:id="totalcol" minWidth="0.0" prefWidth="107.0" text="Total" />
+            <TableColumn fx:id="actionColum" prefWidth="70.0" text="Accion" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

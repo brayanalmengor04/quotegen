@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="quotegen" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3e28c492-b607-43af-9700-0972613e298b">
+	<property name="ireport.zoom" value="0.9090909090909091"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="description" class="java.lang.String"/>
+	<parameter name="unit" class="java.lang.String"/>
+	<parameter name="price" class="java.lang.String"/>
+	<parameter name="namecompany" class="java.lang.String"/>
+	<parameter name="addresscompany" class="java.lang.String"/>
+	<parameter name="phonecompany" class="java.lang.String"/>
+	<parameter name="emailcompany" class="java.lang.String"/>
+	<parameter name="namecustommer" class="java.lang.String"/>
+	<parameter name="addresscustommer" class="java.lang.String"/>
+	<parameter name="phonecustommer" class="java.lang.String"/>
+	<parameter name="emailcustommer" class="java.lang.String"/>
+	<parameter name="numerocotizacion" class="java.lang.String"/>
+	<parameter name="subtotal" class="java.lang.String"/>
+	<parameter name="totalproducto" class="java.lang.String"/>
+	<parameter name="totalproductoprecio" class="java.lang.String"/>
+	<parameter name="itbms" class="java.lang.String"/>
+	<parameter name="preciofinalproducto" class="java.lang.String"/>
+	<parameter name="imagecompany" class="java.lang.String"/>
+	<parameter name="silueta" class="java.lang.String"/>
+	<field name="description" class="java.lang.String"/>
+	<field name="unit" class="java.lang.String"/>
+	<field name="price" class="java.lang.String"/>
+	<field name="total" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement x="-21" y="-20" width="596" height="79" backcolor="#006633" uuid="793eb97c-dd2f-414f-8b00-da8517d91b80"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="6" width="555" height="53" forecolor="#FFFFFF" uuid="427229f4-8a8f-4172-a2e7-4451aab911e8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto" size="40" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[COTIZACION]]></text>
+			</staticText>
+			<textField pattern="EEE, d MMM yyyy HH:mm:ss Z">
+				<reportElement mode="Transparent" x="0" y="-20" width="555" height="26" forecolor="#FFFFFF" uuid="dcb6d77f-2424-4012-90a4-3eb33fbf987e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto" size="13" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="203" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Opaque" x="204" y="0" width="139" height="25" backcolor="#006633" uuid="117157e0-d8eb-436c-8d85-5d5bd7ae1ec7"/>
+				<graphicElement>
+					<pen lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="245" y="0" width="24" height="25" forecolor="#FFFFFF" uuid="2aac9a20-9900-445d-8891-1d5c190b23ed"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Roboto" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N°: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="73" width="172" height="36" backcolor="#003300" uuid="c8d920fe-9daa-40b6-b7f8-db90ff236921"/>
+				<textElement>
+					<font fontName="Roboto" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATOS EMPRESA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="343" y="73" width="201" height="36" uuid="c755b0af-1928-40e1-a8ae-0f17b24fc5b3"/>
+				<textElement>
+					<font fontName="Roboto" size="15" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[DATOS DEL CLIENTE]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="15" y="109" width="139" height="17" forecolor="#333333" uuid="f400d65a-8b49-4369-89ee-2b464bc49d20"/>
+				<textElement>
+					<font fontName="Roboto" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{namecompany}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="15" y="126" width="139" height="20" forecolor="#333333" uuid="241d5be9-4fea-4baa-b163-0e824a4aa7ac"/>
+				<textElement>
+					<font fontName="Roboto" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{addresscompany}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="15" y="146" width="139" height="20" forecolor="#333333" uuid="8909569e-2e9f-454e-bf81-9631e6860374"/>
+				<textElement>
+					<font fontName="Roboto" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{phonecompany}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="15" y="166" width="139" height="20" forecolor="#333333" uuid="5c72759f-e999-44a1-9a1d-4eb8bccc87ab"/>
+				<textElement>
+					<font fontName="Roboto" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{emailcompany}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="367" y="109" width="157" height="20" forecolor="#333333" uuid="c75d638a-9e31-4049-bdd9-e009725c00da"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Roboto" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{namecustommer}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="367" y="126" width="157" height="20" forecolor="#333333" uuid="b2b136a5-2118-468b-950b-cf46a53e4079"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Roboto" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{addresscustommer}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="367" y="146" width="157" height="20" forecolor="#333333" uuid="6b2c03bf-12dd-4118-b7a7-57140960b5af"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Roboto" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{phonecustommer}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="367" y="166" width="157" height="20" forecolor="#333333" uuid="9bfdf0b5-ce32-4153-9393-8ca33d9f199e"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Roboto" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{emailcustommer}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="269" y="0" width="29" height="25" forecolor="#FFFFFF" uuid="933e6a0a-df96-4026-9843-da2e7766badd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto" size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+				<reportElement x="-4" y="63" width="40" height="40" uuid="a44e9054-7785-4bed-9d5e-832c0d7dbc67"/>
+				<imageExpression><![CDATA[$P{silueta}]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+				<reportElement x="303" y="63" width="40" height="40" uuid="9c34e99a-9e0e-4c1a-9a7a-1b9a0776f726"/>
+				<imageExpression><![CDATA[$P{silueta}]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="27" splitType="Stretch">
+			<rectangle>
+				<reportElement x="19" y="0" width="515" height="27" backcolor="#006633" uuid="3ab3c802-a602-4525-a8a1-e01b209bafec"/>
+			</rectangle>
+			<staticText>
+				<reportElement mode="Transparent" x="19" y="0" width="210" height="27" forecolor="#FFFFFF" uuid="e2dc45da-896b-4fc2-8b2d-cba3ab2df11b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descripcion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="229" y="0" width="69" height="27" forecolor="#FFFFFF" uuid="185445c9-02d0-435a-bfe2-27490b0d15cc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Unidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="298" y="0" width="90" height="27" forecolor="#FFFFFF" uuid="a9e941ba-d0f7-4a1d-b774-f95d8d72eaf1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Precio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="390" y="0" width="146" height="27" forecolor="#FFFFFF" uuid="ee956dc9-7269-41d9-acfb-1a095e716f84"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Transparent" x="19" y="0" width="208" height="21" uuid="db83745b-48e0-4f08-91c2-ebb259ed9416"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="227" y="0" width="71" height="21" backcolor="#FFFFFF" uuid="12417356-0d50-407f-a244-1e3a5328edf8"/>
+				<graphicElement>
+					<pen lineColor="#003300"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Opaque" x="298" y="0" width="92" height="21" forecolor="#FFFFFF" uuid="aa3c5e45-d99b-45a7-ace0-eb882e93ea82"/>
+				<graphicElement>
+					<pen lineColor="#003300"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Opaque" x="388" y="0" width="146" height="21" uuid="a9581999-cfc3-44b9-8dde-62b7ed022d26"/>
+				<graphicElement>
+					<pen lineColor="#003300"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement mode="Transparent" x="21" y="1" width="206" height="20" uuid="99f508f4-ee36-4061-a6f5-768b79ff5ddd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="312" y="0" width="55" height="20" uuid="66f1f788-4576-435b-9725-62d17bf8a65c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="403" y="0" width="121" height="20" uuid="c60220ee-fbaa-4f47-a848-544f2b867db6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="242" y="2" width="37" height="19" uuid="7eaf0da6-8cdb-4fbd-9c82-524d1e8fd935"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{unit}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="263" splitType="Stretch">
+			<staticText>
+				<reportElement x="36" y="202" width="209" height="20" forecolor="#333333" uuid="e6bb60b7-245a-4b1b-8d1d-5053df882124"/>
+				<textElement>
+					<font fontName="Roboto" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[CONTACTANOS EN NUESTROS GMAIL:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="245" y="202" width="145" height="20" forecolor="#333333" uuid="b463a114-0ee3-441a-a9f5-c3c5249abcea"/>
+				<textElement>
+					<font fontName="Roboto" isBold="false" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{emailcompany}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame" hAlign="Center">
+				<reportElement x="442" y="120" width="102" height="82" uuid="b85a152f-1e18-45f2-b40f-aa83bf72b993"/>
+				<imageExpression><![CDATA[$P{imagecompany}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="15" y="120" width="407" height="63" uuid="5246f28e-27f2-4572-a91a-a8fd6c4f5d9e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Roboto"/>
+				</textElement>
+				<text><![CDATA[Para abonar o pagar el valor de esta cotización, realice su pago a la siguiente cuenta y envíe la confirmación. Para iniciar el trabajo, se requiere un abono del 50% del total. Si tiene alguna pregunta o necesita asistencia, por favor, no dude en contactarnos.]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="19" y="12" width="293" height="27" forecolor="#CCFFCC" backcolor="#006633" uuid="b135ed60-c001-465f-8135-6849d68013bc"/>
+				<graphicElement>
+					<pen lineColor="#006633"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="227" y="12" width="85" height="27" forecolor="#FFFFFF" uuid="dfe5f73c-9551-4e44-a98c-3629522905c0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{totalproducto}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="19" y="12" width="206" height="27" forecolor="#FFFFFF" uuid="67632370-751d-4ebd-9fcb-ebf514607077"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Unidad]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="310" y="12" width="224" height="73" forecolor="#CCFFCC" backcolor="#006633" uuid="28ac7789-04a2-4992-ab76-5e92449ec539"/>
+				<graphicElement>
+					<pen lineColor="#006633"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="312" y="12" width="76" height="27" forecolor="#FFFFFF" uuid="6dd8af43-7d62-48d5-bbea-886148ef9373"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Subtotal :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="312" y="39" width="76" height="20" forecolor="#FFFFFF" uuid="55e7be02-db35-479a-8418-48afc094e035"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ITMBS(7%):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="312" y="59" width="76" height="26" forecolor="#FFFFFF" uuid="8fa0d547-a500-4c91-ac9f-4a7eab09bfa6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="388" y="59" width="146" height="26" forecolor="#FFFFFF" uuid="84680b5c-73db-4e80-9d64-03defa54c1c9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{preciofinalproducto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="388" y="12" width="146" height="27" forecolor="#FFFFFF" uuid="b5aabeac-0244-4775-9899-02fac09f28d4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{subtotal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="390" y="39" width="144" height="20" forecolor="#FFFFFF" uuid="4dfa2715-bac7-418c-bab4-cca839e2b2a2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{itbms}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="243" width="110" height="20" forecolor="#999999" uuid="3bd02b02-93ce-4a48-8572-e7ea720a6dee"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Roboto"/>
+				</textElement>
+				<text><![CDATA[QuoteGenAplication]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="422" y="243" width="65" height="20" uuid="66b81c6e-d793-464a-8c2d-e23aa2c7060b"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="496" y="243" width="40" height="20" uuid="beb4da10-d61d-4cde-9bfe-daa15a204fcd"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="32" splitType="Stretch"/>
+	</summary>
+</jasperReport>
