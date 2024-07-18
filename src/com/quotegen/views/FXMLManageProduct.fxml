@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
@@ -46,12 +45,12 @@
                   </ImageView>
                   <VBox alignment="CENTER" prefHeight="74.0" prefWidth="120.0">
                      <children>
-                        <Label fx:id="NameManageUser" prefHeight="17.0" prefWidth="99.0" text="Name User" textFill="#a11bbc">
+                        <Label prefHeight="17.0" prefWidth="99.0" text="Name User" textFill="#a11bbc">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="RolManageUser" prefHeight="17.0" prefWidth="90.0" text="Rol">
+                        <Label prefHeight="17.0" prefWidth="90.0" text="Rol">
                            <VBox.margin>
                               <Insets bottom="10.0" />
                            </VBox.margin>
@@ -88,13 +87,12 @@
             </HBox>
             <ScrollPane hbarPolicy="NEVER" prefHeight="395.0" prefWidth="655.0" style="-fx-background-color: transparent;" vbarPolicy="NEVER">
                <content>
-                  <FlowPane fx:id="flowPaneContainer" hgap="20.0" maxHeight="395.0" maxWidth="-Infinity" orientation="VERTICAL" prefHeight="395.0" prefWidth="735.0" style="-fx-background-color: #fff;" vgap="20.0" />
+                  <FlowPane hgap="20.0" maxHeight="395.0" maxWidth="-Infinity" orientation="VERTICAL" prefHeight="395.0" prefWidth="735.0" vgap="20.0" />
                </content>
                <VBox.margin>
                   <Insets left="50.0" right="50.0" />
                </VBox.margin>
             </ScrollPane>
-            <Button fx:id="CreateProduct" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" text="Create Producto" />
          </children>
       </VBox>
    </children>

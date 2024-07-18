@@ -3,29 +3,24 @@ package com.quotegen.domain;
 
 public class Reporte {
     private byte [] logotipe ;  
-    private String namecompany,addresscompany,phonecompany,emailcompany; 
+    private String nameCompany,address,phone,email; 
     private Customer customer; 
 
     public Reporte() {
     }
 
-    public Reporte(byte[] logotipe, String namecompany, String addresscompany, String phonecompany, String emailcompany, Customer customer) {
+    public Reporte(byte[] logotipe, String nameCompany, String address, String phone, String email, Customer customer) {
         this.logotipe = logotipe;
-        this.namecompany = namecompany;
-        this.addresscompany = addresscompany;
-        this.phonecompany = phonecompany;
-        this.emailcompany = emailcompany;
+        this.nameCompany = nameCompany;
+        this.address = address;
+        this.phone = phone;
+        this.email = email;
         this.customer = customer;
     }
 
-    public Reporte(String namecompany, String addresscompany, String phonecompany, String emailcompany, Customer customer) {
-        this.namecompany = namecompany;
-        this.addresscompany = addresscompany;
-        this.phonecompany = phonecompany;
-        this.emailcompany = emailcompany;
-        this.customer = customer;
-    }
-
+    
+    
+    
     
     public byte[] getLogotipe() {
         return logotipe;
@@ -35,36 +30,36 @@ public class Reporte {
         this.logotipe = logotipe;
     }
 
-    public String getNamecompany() {
-        return namecompany;
+    public String getNameCompany() {
+        return nameCompany;
     }
 
-    public void setNamecompany(String namecompany) {
-        this.namecompany = namecompany;
+    public void setNameCompany(String nameCompany) {
+        this.nameCompany = nameCompany;
     }
 
-    public String getAddresscompany() {
-        return addresscompany;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAddresscompany(String addresscompany) {
-        this.addresscompany = addresscompany;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
-    public String getPhonecompany() {
-        return phonecompany;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setPhonecompany(String phonecompany) {
-        this.phonecompany = phonecompany;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
-    public String getEmailcompany() {
-        return emailcompany;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEmailcompany(String emailcompany) {
-        this.emailcompany = emailcompany;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Customer getCustomer() {
@@ -75,6 +70,7 @@ public class Reporte {
         this.customer = customer;
     }
 
-
+  
+    
     
 }
